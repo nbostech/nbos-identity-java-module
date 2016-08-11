@@ -28,28 +28,6 @@ public class IdentityApi extends NetworkApi {
         setRemoteApiClass(IdentityRemoteApi.class);
     }
 
-    public TokenApiModel getClientToken() {
-        final IdentityRemoteApi remoteApi = getRemoteApi();
-
-        Map map = apiContext.getClientCredentials();
-        String clientId = (String) map.get("client_id");
-        String secret = (String) map.get("client_secret");
-
-        // The following works.
-        Call<TokenApiModel> call = remoteApi.getToken(clientId, secret, "client_credentials");
-        try {
-            Response<TokenApiModel> response = call.execute();
-            TokenApiModel tokenApiModel = response.body();
-            System.out.println("token:" + tokenApiModel.getAccess_token());
-            apiContext.setClientToken(tokenApiModel);
-            return tokenApiModel;
-        } catch (IOException x) {
-            System.out.println("Unable to get client token");
-            return null;
-        }
-
-    }
-
     public NewMemberApiModel login(LoginModel loginModel, final IdnCallback<NewMemberApiModel> callback) {
 
         IdentityRemoteApi identityRemoteApi = getRemoteApi();

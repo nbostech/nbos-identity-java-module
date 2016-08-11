@@ -26,7 +26,6 @@ import retrofit2.http.Query;
 public interface IdentityRemoteApi {
 
     String baseIdentityUrl = "/api/identity/v0";
-    String tokenUrl = "/oauth/token";
     String loginUrl = baseIdentityUrl + "/auth/login";
     String signupUrl = baseIdentityUrl + "/users/signup";
     String connectUrl = baseIdentityUrl + "/auth/social/{connectService}/connect";
@@ -37,13 +36,6 @@ public interface IdentityRemoteApi {
     String logoutUrl = baseIdentityUrl + "/auth/logout";
     String socialLoginUrl = baseIdentityUrl + "/auth/social/{loginService}/login";
 
-
-    @FormUrlEncoded
-    @POST(tokenUrl)
-    Call<TokenApiModel> getToken(@Field("client_id") String clientId, @Field("client_secret") String clientSecret, @Field("grant_type") String grantType);
-
-    @POST(tokenUrl)
-    Call<TokenApiModel> refreshAccessToken(@Field("client_id") String clientId, @Field("client_secret") String clientSecret, @Field("grant_type") String grantType, @Field("refresh_token") String refreshToken);
 
     @POST(loginUrl)
     Call<NewMemberApiModel> login(@Header("Authorization") String authorization, @Body LoginModel login);
