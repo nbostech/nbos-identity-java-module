@@ -1,6 +1,6 @@
-package com.nbos.capi.modules.identity.v0;
+package io.nbos.capi.modules.identity.v0;
 
-import com.nbos.capi.modules.ids.v0.IDS;
+import io.nbos.capi.modules.ids.v0.IDS;
 
 
 /**

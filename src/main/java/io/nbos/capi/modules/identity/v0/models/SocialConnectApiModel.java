@@ -1,4 +1,4 @@
-package com.nbos.capi.modules.identity.v0.models;
+package io.nbos.capi.modules.identity.v0.models;
 
 /**
  * Created by vivekkiran on 7/1/16.

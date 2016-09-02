@@ -1,15 +1,15 @@
-package com.nbos.capi.modules.identity.v0;
+package io.nbos.capi.modules.identity.v0;
 
-import com.nbos.capi.api.v0.models.RestMessage;
-import com.nbos.capi.api.v0.models.TokenApiModel;
-import com.nbos.capi.modules.identity.v0.models.LoginModel;
-import com.nbos.capi.modules.identity.v0.models.MemberApiModel;
-import com.nbos.capi.modules.identity.v0.models.MemberSignupModel;
-import com.nbos.capi.modules.identity.v0.models.NewMemberApiModel;
-import com.nbos.capi.modules.identity.v0.models.ResetPasswordModel;
-import com.nbos.capi.modules.identity.v0.models.SocialConnectApiModel;
-import com.nbos.capi.modules.identity.v0.models.SocialConnectUrlResponse;
-import com.nbos.capi.modules.identity.v0.models.UpdatePasswordApiModel;
+import io.nbos.capi.api.v0.models.RestMessage;
+import io.nbos.capi.api.v0.models.TokenApiModel;
+import io.nbos.capi.modules.identity.v0.models.LoginModel;
+import io.nbos.capi.modules.identity.v0.models.MemberApiModel;
+import io.nbos.capi.modules.identity.v0.models.MemberSignupModel;
+import io.nbos.capi.modules.identity.v0.models.NewMemberApiModel;
+import io.nbos.capi.modules.identity.v0.models.ResetPasswordModel;
+import io.nbos.capi.modules.identity.v0.models.SocialConnectApiModel;
+import io.nbos.capi.modules.identity.v0.models.SocialConnectUrlResponse;
+import io.nbos.capi.modules.identity.v0.models.UpdatePasswordApiModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
